@@ -13,8 +13,8 @@ module.exports = function(sequelize, DataTypes){
         }}, 
 		relaciones: {
 			CMMiembroId: {pintar: [1,2,3,4], name: 'Miembro', tipo: 'select'},
-			ParienteId: {pintar: [1,2,3,4], name: 'Quien es su pariente', tipo: 'select'},
 			CMTipoParentescoId: {pintar: [1,2,3,4], name: 'Tipo de parentesco', tipo: 'select'},
+			ParienteId: {pintar: [1,2,3,4], name: 'Quien es su pariente', tipo: 'select'},
 		},
 		seguridad: {
 			1: 'CMParentescoIns', 2: 'CMParentescoAct', 3: 'CMParentescoEli', 4: 'CMParentescoBus' 
