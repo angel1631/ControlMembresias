@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes){
     },{
 		freezeTableName: true,
 		paranoid: true,
-		referencia: {representante: ['titulo']},
+		referencia: {titulo_modelo: 'Eventos',representante: ['titulo']},
 		classMethods:  { associate: function(models){ 
 			CMEvento.belongsTo(models.Usuario, {as: 'Creador', foreignKey: {allowNull: false}})
 		}},
