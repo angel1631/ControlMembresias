@@ -1,8 +1,8 @@
 module.exports = function(sequelize, DataTypes){
 	let CMEvento = sequelize.define('CMEvento', {
 		id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, pintar: [2,3,4], name: 'Identificador', tipo: 'number'},
-        titulo: {type: DataTypes.STRING, allowNull: false, pintar: [1,2,3,4], unique:true, name: 'Nombre del evento', tipo: 'text'},
-		fecha: {type: DataTypes.DATE, allowNull: false, pintar: [1,2,3,4], unique: true, name: 'Fecha del evento', tipo: 'date'}
+        titulo: {type: DataTypes.STRING, allowNull: false, pintar: [1,2,3,4], name: 'Nombre del evento', tipo: 'text'},
+		fecha: {type: DataTypes.DATE, allowNull: false, pintar: [1,2,3,4], name: 'Fecha del evento', tipo: 'date'}
     },{
 		freezeTableName: true,
 		paranoid: true,
@@ -11,7 +11,8 @@ module.exports = function(sequelize, DataTypes){
 			CMEvento.belongsTo(models.Usuario, {as: 'Creador', foreignKey: {allowNull: false}})
 		}},
 		multiples: [
-			{id: 'CMAsistenciaId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar asistente', modelo_insertar: 'CMAsistencia', campo_padre: 'CMEventoId'},
+			{id: 'AsistenciaId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar asistente', modelo_insertar: 'CMAsistencia', campo_padre: 'CMEventoId'},
+			{id: 'ContactoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar medios para contactarlo', modelo_insertar: 'CMContacto', campo_padre: 'CMMiembroId'},
 		],seguridad: {
 			1: 'CMEventoIns', 2: 'CMEventoAct', 3: 'CMEventoEli', 4: 'CMEventoBus' 
 		}
