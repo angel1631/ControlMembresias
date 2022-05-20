@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes){
 								CMAsistencia.belongsTo(models.CMMiembro, {foreignKey: {allowNull: false}})
 							}}, 
 		relaciones: {
-			CMMiembro: {pintar: [1,2,3,4], name: 'Miembros', tipo: 'select'},
+			CMMiembroId: {pintar: [1,2,3,4], name: 'Miembros', tipo: 'select'},
 		},
 		seguridad: {
 			1: 'CMAsistenciaIns', 2: 'CMAsistenciaAct', 3: 'CMAsistenciaEli', 4: 'CMAsistenciaBus' 
