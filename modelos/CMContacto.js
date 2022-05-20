@@ -1,8 +1,9 @@
 module.exports = function(sequelize, DataTypes){
 	let CMContacto = sequelize.define('CMContacto', {
 		id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, pintar: [2,3,4], name: 'Identificador', tipo: 'number'},
-		dato: {type: DataTypes.STRING, allowNull: false, orden:3, pintar: [1,2,3,4], name: 'Informacion contactarlo', tipo: 'text', length: 150}
-    },{
+		dato: {type: DataTypes.STRING, allowNull: false, orden:3, pintar: [1,2,3,4], name: 'Informacion contactarlo', tipo: 'text', length: 150},
+		observacion: {type: DataTypes.STRING, allowNull: true, orden: 4, pintar: [1,2,3,4], name:'Observacion', tipo: 'textarea'}
+	},{
 		freezeTableName: true,
 		paranoid: true,
 		referencia: {representante: ['CMTipoContactoId.titulo', 'dato']},
