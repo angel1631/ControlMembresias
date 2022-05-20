@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes){
 	let CMContacto = sequelize.define('CMContacto', {
 		id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, pintar: [2,3,4], name: 'Identificador', tipo: 'number'},
-		dato: {type: DataTypes.STRING, allowNull: false, pintar: [1,2,3,4], name: 'Informacion contactarlo', tipo: 'text', length: 150}
+		dato: {type: DataTypes.STRING, allowNull: false, orden:3, pintar: [1,2,3,4], name: 'Informacion contactarlo', tipo: 'text', length: 150}
     },{
 		freezeTableName: true,
 		paranoid: true,
@@ -12,8 +12,9 @@ module.exports = function(sequelize, DataTypes){
                                 CMContacto.belongsTo(models.CMTipoContacto, {foreignKey: {allowNull: false}})
 							}},
         relaciones: {
-			CMTipoContactoId: {pintar: [1,2,3,4], name: 'Tipos de contacto', tipo: 'select'},
-            CMMiembroId: {pintar: [1,2,3,4], name: 'Miembros', tipo: 'select'},
+			CMMiembroId: {pintar: [1,2,3,4], orden:1, name: 'Miembros', tipo: 'select'},
+			CMTipoContactoId: {pintar: [1,2,3,4], orden:2, name: 'Tipos de contacto', tipo: 'select'},
+            
             
         },
 		seguridad: {
