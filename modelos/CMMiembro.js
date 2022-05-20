@@ -3,7 +3,7 @@ module.exports = function(sequelize, DataTypes){
 		id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, pintar: [2,3,4], name: 'Identificador', tipo: 'number'},
         nombre: {type: DataTypes.STRING, allowNull:false, unique: true, pintar: [1,2,3,4], name: 'Nombre completo', tipo: 'text'},
         correo: {type: DataTypes.STRING, allowNull:true, pintar: [1,2,3,4], name: 'Correo electronico', tipo: 'text'},
-        nacimiento: {type: DataTypes.DATE, allowNull:true, pintar: [1,2,3,4], name: 'Fecha de nacimiento', tipo: 'datetime-local'},
+        nacimiento: {type: DataTypes.DATE, allowNull:true, pintar: [1,2,3,4], name: 'Fecha de nacimiento', tipo: 'date'},
         telefono: {type: DataTypes.INTEGER, allowNull:true, pintar: [1,2,3,4], name: 'Numero de telefono', tipo: 'number'},
         direccion: {type: DataTypes.STRING, allowNull:true, pintar: [1,2,3,4], name: 'Direccion de residencia', tipo: 'text'},
         foto: {type: DataTypes.STRING, allowNull:true, pintar: [1,2,3,4], name: 'Foto de perfil', tipo: 'text'},
