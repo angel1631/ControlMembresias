@@ -15,8 +15,8 @@ module.exports = function(sequelize, DataTypes){
             CMMiembro.belongsTo(models.Usuario, {as: 'Creador', foreignKey: {allowNull: false}})
         }}, 
 		multiples: [
-            {id: 'ContactoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar medios para contactarlo', modelo_insertar: 'SCContacto', campo_padre: 'SCMiembroId'},
-            {id: 'ParentescoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar parentesco con otro miembro', modelo_insertar: 'SCParentesco', campo_padre: 'SCMiembroId'}
+            {id: 'ContactoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar medios para contactarlo', modelo_insertar: 'CMContacto', campo_padre: 'CMMiembroId'},
+            {id: 'ParentescoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar parentesco con otro miembro', modelo_insertar: 'CMParentesco', campo_padre: 'CMMiembroId'}
         ],
 		seguridad: {
 			1: 'CMMiembroIns', 2: 'CMMiembroAct', 3: 'CMMiembroEli', 4: 'CMMiembroBus' 
