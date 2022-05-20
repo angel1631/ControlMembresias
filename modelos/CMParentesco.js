@@ -12,7 +12,9 @@ module.exports = function(sequelize, DataTypes){
             CMParentesco.belongsTo(models.CMTipoParentesco, {foreignKey: {allowNull: false}})
         }}, 
 		relaciones: {
-			CMMiembroId: {pintar: [1,2,3,4], name: 'Miembros', tipo: 'select'},
+			CMMiembroId: {pintar: [1,2,3,4], name: 'Miembro', tipo: 'select'},
+			ParienteId: {pintar: [1,2,3,4], name: 'Quien es su pariente', tipo: 'select'},
+			CMTipoParentesco: {pintar: [1,2,3,4], name: 'Tipo de parentesco', tipo: 'select'},
 		},
 		seguridad: {
 			1: 'CMParentescoIns', 2: 'CMParentescoAct', 3: 'CMParentescoEli', 4: 'CMParentescoBus' 
