@@ -21,8 +21,8 @@ module.exports = function(sequelize, DataTypes){
             {id: 'ParentescoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar parentesco con otro miembro', modelo_insertar: 'CMParentesco', campo_padre: 'CMMiembroId'}
         ],
 		relaciones: {
-            CMEstadoCivilId: {pintar: [1,2,3,4], orden:4, name: 'Estado Civil Socio', tipo: 'select'},
-            CMGeneroId: {pintar: [1,2,3,4], orden: 3, name: 'Genero del socio', tipo: 'select'}
+            CMEstadoCivilId: {pintar: [1,2,3,4], orden:4, name: 'Estado Civil', tipo: 'select'},
+            CMGeneroId: {pintar: [1,2,3,4], orden: 3, name: 'Genero', tipo: 'select'}
         },
 		seguridad: {
 			1: 'CMMiembroIns', 2: 'CMMiembroAct', 3: 'CMMiembroEli', 4: 'CMMiembroBus' 
