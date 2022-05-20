@@ -12,7 +12,6 @@ module.exports = function(sequelize, DataTypes){
 		}},
 		multiples: [
 			{id: 'AsistenciaId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar asistente', modelo_insertar: 'CMAsistencia', campo_padre: 'CMEventoId'},
-			{id: 'ContactoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar medios para contactarlo', modelo_insertar: 'CMContacto', campo_padre: 'CMMiembroId'},
 		],seguridad: {
 			1: 'CMEventoIns', 2: 'CMEventoAct', 3: 'CMEventoEli', 4: 'CMEventoBus' 
 		}
