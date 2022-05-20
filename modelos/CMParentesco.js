@@ -4,7 +4,7 @@ module.exports = function(sequelize, DataTypes){
     },{
 		freezeTableName: true,
 		paranoid: true,
-		referencia: {representante: ['titulo']},
+		referencia: {representante: ['ParienteId.nombre', 'CMTipoParentescoId.titulo']},
 		classMethods:  { associate: function(models){ 
             CMParentesco.belongsTo(models.Usuario, {as: 'Creador', foreignKey: {allowNull: false}}),
             CMParentesco.belongsTo(models.CMMiembro, {foreignKey: {allowNull: false}}),
