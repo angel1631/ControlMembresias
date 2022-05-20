@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes){
         nacimiento: {type: DataTypes.DATE, allowNull:true, pintar: [1,2,3,4], name: 'Fecha de nacimiento', tipo: 'date'},
         telefono: {type: DataTypes.INTEGER, allowNull:true, pintar: [1,2,3,4], name: 'Numero de telefono', tipo: 'number'},
         direccion: {type: DataTypes.STRING, allowNull:true, pintar: [1,2,3,4], name: 'Direccion de residencia', tipo: 'text'},
-        foto: {type: DataTypes.STRING, allowNull:true, pintar: [1,2,3,4], name: 'Foto de perfil', tipo: 'text'},
+        foto: {type: DataTypes.STRING, allowNull:true, pintar: [1,2,3,4], name: 'Foto de perfil', tipo: 'archivo'},
     },{
 		freezeTableName: true,
 		paranoid: true,
