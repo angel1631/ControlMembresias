@@ -1,7 +1,8 @@
 module.exports = function(sequelize, DataTypes){
 	let CMExpediente = sequelize.define('CMExpediente', {
 		id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true, pintar: [2,3,4], name: 'Identificador', tipo: 'number'},
-		archivo: {type: DataTypes.STRING, pintar: [1,2,3,4], orden: 3, name: 'Adjunto para expediente', tipo: 'archivo'}
+		archivo: {type: DataTypes.STRING, pintar: [1,2,3,4], orden: 3, name: 'Adjunto para expediente', tipo: 'archivo'},
+		observacion: {type: DataTypes.STRING, allowNull: true, orden: 4, pintar: [1,2,3,4], name:'Observacion', tipo: 'textarea'}
 	},{
 		freezeTableName: true,
 		paranoid: true,
