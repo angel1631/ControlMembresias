@@ -11,8 +11,8 @@ module.exports = function(sequelize, DataTypes){
 								CMMiembroGrupo.belongsTo(models.CMMiembro, {foreignKey: {allowNull: false}})
 							}}, 
 		relaciones: {
-			CMGrupoId: {pintar: [1,2,3,4], name: 'Nombre del evento', tipo: 'select'},
-			CMMiembroId: {pintar: [1,2,3,4], name: 'Miembros', tipo: 'select'},
+			CMGrupoId: {pintar: [1,2,3,4], name: 'seleccione el grupo de trabajo', tipo: 'select'},
+			CMMiembroId: {pintar: [1,2,3,4], name: 'seleccione el miembro', tipo: 'select'},
 		},
 		seguridad: {
 			1: 'CMMiembroGrupoIns', 2: 'CMMiembroGrupoAct', 3: 'CMMiembroGrupoEli', 4: 'CMMiembroGrupoBus' 
