@@ -18,7 +18,8 @@ module.exports = function(sequelize, DataTypes){
         }}, 
 		multiples: [
             {id: 'ContactoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar medios para contactarlo', modelo_insertar: 'CMContacto', campo_padre: 'CMMiembroId'},
-            {id: 'ParentescoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar parentesco con otro miembro', modelo_insertar: 'CMParentesco', campo_padre: 'CMMiembroId'}
+            {id: 'ParentescoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar parentesco con otro miembro', modelo_insertar: 'CMParentesco', campo_padre: 'CMMiembroId'},
+            {id: 'GrupoId', tipo: 'multiple', botonera: ['insertar'], pintar: [1,2,3,4], name: 'Agregar grupos en los que participa', modelo_insertar: 'CMMiembroGrupo', campo_padre: 'CMMiembroId'},            
         ],
 		relaciones: {
             CMEstadoCivilId: {pintar: [1,2,3,4], orden:4, name: 'Estado Civil', tipo: 'select'},
