@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 const seguridad = require('../Seguridad/servicios.js');
+const core_funciones = require('../../core/funciones.js');
 const services = require('./servicios.js');
 
 router.post('/agregar_asistencia_miembro', async (req,res,next)=>{
